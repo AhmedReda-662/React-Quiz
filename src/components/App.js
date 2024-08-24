@@ -93,7 +93,7 @@ export default function App() {
   useEffect(() => {
     async function getData() {
       try {
-        const res = await fetch("http://localhost:8000/questions");
+        const res = await fetch("../data/question.json");
         const data = await res.json();
         dispatch({ type: "dataRecived", payload: data });
       } catch {
